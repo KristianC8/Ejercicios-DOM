@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios DOM</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=AR+One+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="./Images/Dev.svg">
+</head>
+
+<body>
+    <div class="menu-Hamb">
+        <ul>
+            <a href="#seccion1" data-scroll-spy>
+                <li class="menu-List">1. Reloj Digital - Alarma Sonora</li>
+            </a>
+            <a href="#seccion2" data-scroll-spy>
+                <li class="menu-List">2. Eventos Teclado</li>
+            </a>
+            <a href="#seccion3" data-scroll-spy>
+                <li class="menu-List">3. Cuenta Regresiva</li>
+            </a>
+            <a href="#seccion4" data-scroll-spy>
+                <li class="menu-List">4. Responsive JavaScript</li>
+            </a>
+            <a href="#seccion5" data-scroll-spy>
+                <li class="menu-List">5. Responsive Tester</li>
+            </a>
+            <a href="#seccion6" data-scroll-spy>
+                <li class="menu-List">6. Detección de Dispositivos</li>
+            </a>
+            <a href="#seccion7" data-scroll-spy>
+                <li class="menu-List">7. Detección de Red</li>
+            </a>
+            <a href="#seccion8" data-scroll-spy>
+                <li class="menu-List">8. Filtro de Búsqueda</li>
+            </a>
+            <a href="#seccion9" data-scroll-spy>
+                <li class="menu-List">9. Sorteo</li>
+            </a>
+            <a href="#seccion10" data-scroll-spy>
+                <li class="menu-List">10. Slider de Imágenes</li>
+            </a>
+            <a href="#seccion11" data-scroll-spy>
+                <li class="menu-List">11. Video Inteligente</li>
+            </a>
+            <a href="#seccion12" data-scroll-spy>
+                <li class="menu-List">12. Formulario (Validaciones)</li>
+            </a>
+            <a href="#seccion13" data-scroll-spy>
+                <li class="menu-List">Sección 13</li>
+            </a>
+        </ul>
+    </div>
+    <header class="header">
+        <h1>Ejercicios DOM</h1>
+    </header>
+    <main>
+        <section id="seccion1" class="section" data-scroll-spy>
+            <span>Reloj Digital - Alarma Sonora</span>
+            <div class="clock"></div>
+            <div class="clock-Contol">
+                <button class="btn-Clock btn-Clock-1">Iniciar Reloj</button>
+                <button class="btn-Clock btn-Clock-2">Detener Reloj</button>
+                <button class="btn-Clock btn-Clock-3">Iniciar Alarma
+                    <!-- <audio src="./Media/sirena alarma.mp3"></audio> -->
+                </button>
+                <button class="btn-Clock btn-Clock-4">Detener Alarma</button>
+            </div>
+        </section>
+        <section id="seccion2" class="section" data-scroll-spy>
+            <span>Eventos Teclado</span>
+            <div class="container-Stage">
+                <div class="stage">
+                    <div class="ball"></div>
+                </div>
+            </div>
+        </section>
+        <section id="seccion3" class="section" data-scroll-spy><span>Cuenta Regresiva</span>
+            <div class="container-Count">
+                <p class="countdown"></p>
+            </div>
+        </section>
+        <section id="seccion4" class="section" data-scroll-spy><span>Responsive JavaScript</span>
+            <div id="youtube"></div>
+            <div id="gmaps"></div>
+        </section>
+        <section id="seccion5" class="section" data-scroll-spy><span>Responsive Tester</span>
+            <form action="" id="tester-responsive">
+                <input name="url" class="input-tester input1" type="text" placeholder="URL" required>
+                <input name="width" class="input-tester input2" type="number" placeholder="Width" required>
+                <input name="height" class="input-tester input3" type="number" placeholder="Height" required>
+                <div class="container-button-tester">
+                    <input name="probar" class="button-tester" type="submit" value="Probar">
+                    <input name="cerrar" class="button-tester" type="button" value="Cerrar">
+                </div>
+            </form>
+        </section>
+        <section id="seccion6" class="section" data-scroll-spy><span>Detección de Dispositivos</span>
+            <div class="user-agent"></div>
+        </section>
+        <section id="seccion7" class="section" data-scroll-spy><span>Detección de Red</span>
+            <!-- <div class="net-conection"></div> -->
+        </section>
+        <section id="seccion8" class="section" data-scroll-spy><span>Filtro de Búsqueda</span>
+            <input type="search" placeholder="Buscar..." class="card-filter">
+            <div class="search-table"></div>
+        </section>
+        <section id="seccion9" class="section" data-scroll-spy>
+            <span>Sorteo</span>
+            <form class="form-sort">
+                <input name="inItemSort" type="text" class="item-sort" placeholder="Elemento a sortear" required>
+                <input name="btnAddItem" type="button" value="Agregar" class="add-item-sort">
+            </form>
+            <div class="container-sort-list">
+                <ul class="sort-list">
+                </ul>
+            </div>
+            <div class="container-winner">
+                <button class="winner-sort">Sortear</button>
+                <span class="winner"></span>
+            </div>
+        </section>
+        <section id="seccion10" class="section" data-scroll-spy><span>Slider de Imágenes</span>
+            <div class="container-slider">
+                <div class="container-slide">
+
+                </div>
+                <button class="slide-btn next-btn"></button>
+                <button class="slide-btn prev-btn"></button>
+            </div>
+        </section>
+        <section id="seccion11" class="section" data-scroll-spy><span>Video Inteligente</span>
+            <div class="content-videos">
+                <div class="content-videos-view">
+                    <video class="intel-view" id="video1-intel" src="./Media/A-mountain.mp4" data-video-view controls
+                        muted loop></video>
+                </div>
+                <div class="content-videos-view">
+                    <video class=" intel-view" id="video2-intel" src="./Media/Rocky-shore.mp4" data-video-view controls
+                        muted></video>
+                </div>
+                <div class="content-videos-hover">
+                    <video class="intel-hover" id="video3-intel" src="./Media/The-forest.mp4" data-video controls
+                        muted></video>
+                    <video class="intel-hover" id="Video4-intel" src="./Media/The-mountains.mp4" data-video controls
+                        muted></video>
+                </div>
+            </div>
+        </section>
+        <section id="seccion12" class="section" data-scroll-spy><span>Formulario (Validaciones)</span>
+            <form class="contact-form">
+                <legend>Contacto</legend>
+                <input type="text" name="name" placeholder="Nombre" title="El nombre solo puede contener letras y espacios"
+                    pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required>
+                <input type="email" name="email" placeholder="Email" title="Debe ingresar un correo con la estructura válida a@mail.com" pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required>
+                <input type="text" name="subject" placeholder="Asunto" title="El campo no puede estar vacío" required>
+                <textarea name="message" cols="50" rows="8" placeholder="Mensaje" title="Este campo no debe exceder 255 caracteres" data-pattern="^.{1,255}$" required></textarea>
+                <input type="submit" value="Enviar">
+                <div class="contact-loader none">
+                    <img src="./Images/puff.svg" alt="Cargando">
+                </div>
+                <div class="contact-response none">
+                    <h3>Envío realizado</h3>
+                </div>
+            </form>
+        </section>
+        <section id="seccion13" class="section" data-scroll-spy><span>Sección 13</span></section>
+    </main>
+    <button class="menu-Button"></button>
+    <button class="scroll-Button fadeOut"></button>
+    <button class="lightmode-Button"></button>
+    <script src="index_js_dom.js" type="module"></script>
+</body>
+
+</html>

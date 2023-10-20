@@ -1,0 +1,868 @@
+:root{
+    --Azul_oscuro: #0A2647;
+    --Azul_medio_oscuro: #144272;
+    --Azul_medio_claro: #205295;
+    --Azul_claro: #2C74B3;
+    --Letra_clara: #F1EFEF;
+    --Letra_oscura: #222;
+    --Button_color: #F1EFEF;
+    --Disabled-Button: #fffa;
+    --menu_Dark: url('./Images/Menu\ hamburguesa.png');
+    --menu_DarkClose: url("./Images/Cerrar\ menu.png");
+
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 6.25%;
+    font-family: 'AR One Sans', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body{
+    position: relative;
+}
+
+.header{
+    display: flex;
+    padding: 10rem;
+    position: sticky;
+    top: 0;
+    height: 60rem;
+    font-size: 14rem;
+    background-color: var(--Azul_oscuro);
+    z-index: 1;
+}
+
+.header h1{
+    margin: 0 auto;
+    text-align: center;
+    width: auto;
+    /* height: 6vh; */
+    color: var(--Letra_clara);
+}
+
+main{
+    font-size: 12rem;
+}
+
+.section{
+    height: 100vh;
+    padding-top: 12vh; 
+    /* width: 100%; */
+    background-color: var(--Azul_medio_oscuro);
+    font-size: 18rem;
+    font-weight: 700;
+    color: var(--Letra_clara);
+}
+
+.section span{
+    text-align: center;
+    display: block;
+    height: auto;
+    font-size: 22rem;
+}
+
+/*********************** Menu Hamburguesa **************************/
+.menu-Hamb{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow-y: auto;
+    transform: translateX(-100%);
+    background-color: var(--Azul_oscuro);
+    z-index: 2;
+    transition: transform 0.5s ease, opacity 0.5s ease; 
+    opacity: .9;
+  
+}
+
+.menu-Hamb ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu-Hamb a{
+    text-decoration: none;
+    width: 100%;
+
+}
+
+.menu-List{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    font-size: 20rem;
+    font-weight: 700;
+    color: var(--Letra_clara);
+}
+
+.menu-List:hover{
+    background-color: var(--Azul_claro);
+    color: var(--Letra_oscura);
+    transition: .5s ease;
+}
+
+.menu-Button{
+    position: fixed;
+    width: 50rem;
+    height: 50rem;
+    background-color: var(--Azul_oscuro);
+    bottom: 20rem;
+    right: 20rem;
+    border: none;
+    border-radius: 50%;
+    background-image: var(--menu_Dark);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 3;
+    cursor: pointer;
+}
+
+.open-Menu{
+    transform: translateX(0)
+}
+
+.change-ImageMenu{
+    background-image: var(--menu_DarkClose) ;
+}
+
+/******************** Reloj - Alarma ***********************/
+#seccion1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.clock{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4vh;
+    width: 80%;
+    height: 50vh;
+    font-size: 25vh;
+}
+
+.clock-Contol{
+    width: 60%;
+    height: 20vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* flex-wrap: wrap; */
+}
+
+.btn-Clock{
+    height: 45%;
+    width: calc((60vw / 4) - 50rem);
+    min-width: 80rem;
+    min-height: 50rem;
+    padding: 10rem;
+    cursor: pointer;
+    border-radius: 10rem;
+    font-weight: 700;
+    border: solid 1rem;
+    background-color: var(--Button_color);
+    color: var(--Letra_oscura);
+}
+
+.btn-Clock:disabled{
+    background-color: var(--Disabled-Button);
+}
+
+/******************* Eventos teclado **********************/
+.container-Stage{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 4vh;
+}
+
+.stage{
+    display: flex;
+    height: 70%;
+    width: 70%;
+    background-color: var(--Letra_clara);
+}
+
+.ball{
+    margin: auto;
+    height: 50rem;
+    width: 50rem;
+    border-radius: 50%;
+    background-color: var(--Azul_medio_oscuro);
+}
+
+/****************** Cuenta regresiva *********************/
+
+.container-Count{
+    height: 100%;
+    display: grid;
+    place-items: center;
+    padding: 0 10rem;
+}
+
+.countdown{
+    text-align: center;
+    font-size: 25rem;
+}
+
+
+/************ scroll button ***************/
+
+.scroll-Button{
+    position: fixed;
+    width: 50rem;
+    height: 50rem;
+    background-color: var(--Azul_oscuro);
+    bottom: 20rem;
+    right: 80rem;
+    border: none;
+    border-radius: 50%;
+    background-image: url('./Images/up2.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 44rem;
+    z-index: 3;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+/* .fadeIn {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 1s linear;
+  } */
+
+.fadeOut {
+    visibility: hidden;
+    opacity: 0;
+    /* transition: visibility 0s 1s, opacity 1s linear; */
+}
+
+
+/********************** Lightmode button *************************/
+
+.lightmode-Button{
+    position: fixed;
+    width: 50rem;
+    height: 50rem;
+    background-color: var(--Azul_oscuro);
+    bottom: 20rem;
+    left: 20rem;
+    border: none;
+    border-radius: 50%;
+    background-image: url('./Images/sun.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 35rem;
+    z-index: 3;
+    cursor: pointer;
+}
+
+.change-ImageMode{
+    background-image: url("./Images/moon2.png");
+}
+
+.change-ModeScroll{
+    background-image: url("./Images/uplight.png");
+}
+
+/****************** Responvive JavaScript *********************/
+
+#seccion4{
+    display: grid;
+    grid-template-rows: 60rem repeat(2,1fr);
+    justify-items: center;
+}
+
+/****************** Responsive Tester *****************************/
+
+#seccion5{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: repeat(3, 1fr) ;
+}
+
+#seccion5 span{
+    grid-row: 1 / 2; /* El elemento ocupa de la fila 1 a la 2 */
+    grid-column: 2 / 3;
+    justify-self: center;
+}
+
+#tester-responsive {
+    grid-row: 2 / 3; /* El elemento ocupa de la fila 2 a la 3 */
+    grid-column: 2 / 3; /* El elemento ocupa de la columna 2 a la 3 */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4,1fr);
+    padding: 5rem;
+    gap: 10rem;
+}
+
+.input-tester{
+    border-radius: 5rem;
+    border: 0;
+    padding: 0 5rem;
+}
+
+.container-button-tester{
+    display: flex;
+    justify-content: center;
+    gap: 10rem;
+}
+
+.button-tester{
+    width: auto;
+    padding: 0 10rem;
+    border-radius: 10REM;
+    background-color: var(--Button_color);
+    color: var(--Letra_oscura);
+    border-radius: 5rem;
+    border: 0;
+    font-weight: bold;
+}
+
+/************** Detección de Dispositivos ***************/
+
+#seccion6{
+    display: grid;
+    grid-template-rows: repeat(10, 1fr);
+}
+
+.user-agent{
+    grid-row: 2 / 5;
+    margin: 0 30rem;   
+    color: var(--Letra_clara); 
+    padding: 20rem calc(100vw / 6 );
+}
+
+.user-agent li{
+    list-style: none;
+}
+
+/****************** Detección de Red **********************/
+
+#seccion7{
+    display: grid;
+    grid-template-rows: auto 1fr;
+
+}
+
+.net-conection{
+    display: grid;
+    place-content: center;
+    place-self: center;
+    height: 50rem;
+    width: 50%;
+    font-size: 40rem;
+}
+
+/*********** Filtro de Busqueda ************/
+#seccion8{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.search-table{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 250rem);
+    gap: 20rem;
+    padding: 20rem;
+    place-content: center;
+  }
+  
+.card{
+    background-color: var(--second-color);
+    color: var(--main-color);
+    transition: all 0.3s ease-out;
+    margin: 10rem 30rem;
+    background-color: var(--Azul_oscuro);
+}
+
+.card-filter{
+    height: 25rem;
+    width: calc(100vw / 4);
+    margin: 10rem auto;
+    padding: 0 5rem;
+}
+  
+.card-img{
+    width: 100%;
+    height: auto;
+}
+  
+.card-figcaption{
+    padding-bottom: 10rem;
+    text-align: center;
+    color: var(--Letra_clara);
+}
+  
+.filter{
+ display: none;
+    /* visibility: hidden;
+    opacity: 0;
+    order: 1; */
+}
+
+/*************** sorteo ***************/
+
+#seccion9{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, auto) 1fr auto;
+    justify-items: center;
+    height: auto;
+    min-height: 87vh;
+}
+
+#seccion9 span{
+    grid-row: 1 / 2;
+}
+
+.form-sort{
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    margin: 10rem 0;
+}
+
+.item-sort{
+    grid-row: 2 / 3;
+    width: 45%;
+    height: 25rem;
+    margin-right: 10rem;
+}
+
+.add-item-sort{
+    grid-row: 2 / 3;
+    width: 30%;
+    background-color: var(--Button_color);
+    color: var(--Letra_oscura);
+    border-radius: 5rem;
+    border: 0;
+    font-weight: bold;
+}
+
+.container-sort-list{
+   
+    grid-row: 3 / 4;
+    height: auto;
+    width: 40%;
+}
+
+.sort-list{
+    height: auto;   
+   
+    width: 40%;
+    margin: 0 auto;
+}
+
+.sort-list li{
+    height: auto;
+
+}
+
+.container-winner{
+    height: auto;
+    display: flex;
+    justify-content: center;
+ 
+    width: 60%;
+    margin: 10rem 0;
+}
+
+.winner-sort{
+    height: 25rem;
+    width: 30%;
+    margin-right: 10rem;
+    background-color: var(--Button_color);
+    color: var(--Letra_oscura);
+    border-radius: 5rem;
+    border: 0;
+    font-weight: bold;
+}
+
+/* .winner{
+    width: 45%;
+    color: #1b5e;
+    font-weight: bold;
+    background-color: var(--Azul_oscuro);
+} */
+
+[class = "winner"]{
+    width: 45%;
+    color: #1b5e;
+    font-weight: bold;
+    background-color: var(--Azul_oscuro);
+
+}
+
+/******************** slider images *************************/
+
+.container-slider{
+    position: relative;
+    margin-top: 20rem;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+    grid-template-rows: 7% 78% 15%;
+}
+
+.container-slide{
+    position: relative;
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+}
+
+.slide{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* padding: 5rem; */
+    transition: opacity 1s ease;
+    background-color: var(--Azul_oscuro);
+    color: var(--Letra_clara);
+}
+
+.slide h2{
+    padding: 40rem 40rem 0 40rem;
+    text-align: center;
+}
+
+.slide p{
+    padding: 40rem;
+    text-align: justify;
+    font-size: 16rem;
+}
+
+.slide img{
+    height: inherit;
+    width: inherit;
+    object-fit: cover;
+    object-position: 50% 0%;
+}
+
+.slide-btn{
+    position: absolute;
+    height: 7.5%;
+    width: 7.5%;
+    top: 42.5%;
+    border: none;
+    background-size: contain;
+    background-repeat: no-repeat;  
+    background-color: var(--Azul_oscuro);
+}
+
+.next-btn{
+    right: 7%;
+    background-image: url('./Images/arrowRight.png');
+    background-position: center;
+
+}
+
+.prev-btn{
+    left: 7%;
+    background-image: url('./Images/arrowLeft.png');
+    background-position: center;
+
+}
+
+.slide-inactive{
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+/********************* Video Inteligente ***********************/
+
+#seccion11{
+    height: auto;
+}
+
+.content-videos{
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: 1fr;
+    justify-items: center;
+    height: 100%;
+}
+
+.content-videos-view{
+    height: auto;
+    padding-top: 5rem;
+}
+
+.intel-view{
+    height: 480rem;
+    width: 816rem;
+}
+
+.content-videos-hover{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10rem;
+    height: auto;
+    padding: 10rem;
+}
+
+.intel-hover{
+    height: 177rem;
+    width: 300rem;
+}
+
+/********************* Formulario de contacto ************************/
+
+ #seccion12{
+    min-height: 500rem;
+}
+
+.contact-form{
+    --form-ok-color: #49be25;
+    --form-error-color: #f44336;
+    margin: 0 auto;
+    width: 80%;
+}
+
+.contact-form input, textarea {
+    padding: 5rem;
+    margin: 15rem 0 auto;
+    display: block;
+    width: 100%;
+    font-family: 'AR One Sans', sans-serif;
+  }
+
+.contact-form textarea {
+    resize: none;
+}
+
+.contact-form legend,
+.contact-response {
+  font-weight: bold;
+  text-align: center;
+  padding: 10rem 0;
+}
+
+.contact-response{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70rem;
+    color: var(--form-ok-color);
+}
+
+.contact-form input[type="submit"] {
+    width: 50%;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 15rem auto 0 auto;
+    background-color: var(--Button_color);
+    color: var(--Letra_oscura);
+    border: none;
+}
+
+.contact-loader{
+    width: 44rem;
+    margin: 0 auto;
+    padding: 10rem 0;
+}
+
+.contact-form span{
+    display: block;
+    width: 100%;
+     height: auto;/*32rem; */
+    padding: 1rem 4rem 4rem 4rem;
+    font-size: 13rem;
+    font-weight: 500;
+    background-color: var(--form-error-color);
+    color: #fff;
+    transition: all 800ms ease;
+  }
+
+span.none{
+    display: none;
+}
+
+.none{
+    display: none;
+}
+
+.contact-form span.is-active {
+    display: block;
+    animation: show-message 1s 1 normal 0s ease-out both;
+  }
+
+  .contact-form input.is-correct,textarea.is-correct {
+    border: solid 1rem var(--form-ok-color);
+  }
+
+  .contact-form input.is-incorrect,textarea.is-incorrect {
+    border: solid 1rem var(--form-error-color);
+  }
+
+@keyframes show-message {
+    0% {
+      visibility: hidden;
+      opacity: 0;
+    }
+  
+    100% {
+      visibility: visible;
+      opacity: 1;
+    }
+  } 
+
+/*********************** Scroll Spy **************************/
+
+@media screen and (min-width: 1200px){
+    body{
+        display: grid;
+        grid-template-columns: 85% 15%;
+        grid-template-rows: minmax(60rem , 8vh) auto;
+        grid-template-areas:
+        "header header"
+        "main sidemenu";
+    }    
+
+    .header{
+        grid-area: header;
+    }
+
+    main{
+        grid-area: main;
+    }
+
+    .menu-Hamb{
+        position: sticky;
+        top: 60rem;
+        grid-area: sidemenu;
+        align-self: self-start;
+        transform: translateX(0);
+        opacity: 1;
+        /* overflow-y: scroll; */
+        z-index: 1;
+        height: calc(100vh - 60rem);
+        
+    }
+
+    .menu-Hamb ul{
+        justify-content: initial;
+    }
+
+    .menu-List{
+        justify-content: end;
+        height: 30rem;
+        padding: 0 10rem 0 0;
+        font-size: 12rem;
+        font-weight: 600;
+
+    }   
+
+    .menu-Button{
+        display: none;
+    }
+
+    .scroll-Button{
+        left: 80rem; 
+    }
+
+    
+    .menu-Hamb a.active li{
+    color: var(--Letra_oscura);
+    background-color: var(--Azul_claro);
+  }
+
+}
+
+
+
+@media only screen and (max-width: 850px) {
+    
+    .intel-view{
+        height: 240rem;
+        width: 408rem;
+    }
+    
+    .intel-hover{
+        height: 177rem;
+        width: 300rem;
+    }
+    
+    }
+
+@media only screen and (max-width: 480px) {
+    
+.clock{
+    font-size: 6vh;
+}
+
+.countdown{
+    font-size: 18rem;
+}
+
+.user-agent{ 
+    padding: 20rem;
+}
+
+.card-filter{
+    width: calc(100vw / 2);
+}
+
+.item-sort{
+    width: 60%;
+}
+
+.add-item-sort{
+    width: 40%;
+}
+
+.winner-sort{
+    width: 40%;
+}
+
+.winner{
+    width: 60%;
+}
+
+
+.slide p{
+    font-size: 12rem;
+}
+
+}
+
+@media only screen and (max-width: 400px) {
+    .intel-view{
+        height: 177rem;
+        width: 300rem;
+    }
+    
+    .intel-hover{
+        height: 177rem;
+        width: 300rem;
+    }
+}
+
+
