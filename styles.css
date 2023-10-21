@@ -762,6 +762,7 @@ span.none{
     height: 30rem;
     text-align: center;
     font-weight: 700;
+    border-radius: 5rem;
 }
 
 #speech-text{
