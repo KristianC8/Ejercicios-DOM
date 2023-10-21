@@ -53,7 +53,7 @@
                 <li class="menu-List">12. Formulario (Validaciones)</li>
             </a>
             <a href="#seccion13" data-scroll-spy>
-                <li class="menu-List">Sección 13</li>
+                <li class="menu-List">13. Narrador</li>
             </a>
         </ul>
     </div>
@@ -170,7 +170,18 @@
                 </div>
             </form>
         </section>
-        <section id="seccion13" class="section" data-scroll-spy><span>Sección 13</span></section>
+        <section id="seccion13" class="section" data-scroll-spy>
+        <span>Narrador</span>
+        <div class="section-container">
+            <div class="speech-container">
+                <select id="speech-select">
+                    <option value="" selected disabled hidden>   Seleccione una Voz   </option> 
+                </select>
+                <textarea id="speech-text" cols="50" rows="8" placeholder="Ingrese el texto a reproducir"></textarea>
+                <button id="speech-btn"></button>
+            </div>
+        </div>
+        </section>
     </main>
     <button class="menu-Button"></button>
     <button class="scroll-Button fadeOut"></button>

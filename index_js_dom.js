@@ -16,6 +16,7 @@ import sliderImages from "./Modulos/ej13_slider_imges.js";
 import scrollSpy from "./Modulos/ej14_scroll_spy.js";
 import {videoInt, videoHover} from "./Modulos/ej_15_video_inteligente.js";
 import formValidate from "./Modulos/ej15_validacion_formulario.js";
+import readerText from "./ej16_narrador.js";
 
 const d = document
 
@@ -44,10 +45,12 @@ d.addEventListener('DOMContentLoaded', (e)=>{
     videoInt()
     videoHover()
     formValidate()
+
 })
 
 lightmode('.lightmode-Button', '.scroll-Button')
 conection('seccion7')
+readerText()
 
 
 

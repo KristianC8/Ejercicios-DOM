@@ -734,6 +734,56 @@ span.none{
     }
   } 
 
+/*********************** Narrador *****************************/
+
+#seccion13{
+    height: auto;
+    min-height: 100vh;
+}
+
+.section-container{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.speech-container{
+    display: grid;
+    justify-items: center;
+    margin-top: 100rem;
+    width: 80%;
+    min-height: 300rem;
+    height: 50%;
+}
+
+#speech-select{
+    width: 50%;
+    height: 30rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+#speech-text{
+    resize: none;
+}
+
+#speech-btn{
+    margin-top: 15rem;
+    height: 50rem;
+    width: 80rem;
+    font-weight: 700;
+    border: 0;
+    border-radius: 5rem;
+    color: var(--Letra_oscura);
+    background-color: var(--Button_color);
+    background-image: url('./Images/audio.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30%;
+    cursor: pointer;
+}
+
 /*********************** Scroll Spy **************************/
 
 @media screen and (min-width: 1200px){
@@ -808,6 +858,10 @@ span.none{
     .intel-hover{
         height: 177rem;
         width: 300rem;
+    }
+
+    #speech-select{
+        display: none;
     }
     
     }
