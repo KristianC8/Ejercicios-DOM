@@ -154,7 +154,7 @@ main{
     margin-top: 4vh;
     width: 80%;
     height: 50vh;
-    font-size: 25vh;
+    font-size: 15vh;
 }
 
 .clock-Contol{
@@ -791,7 +791,7 @@ span.none{
     body{
         display: grid;
         grid-template-columns: 85% 15%;
-        grid-template-rows: minmax(60rem , 8vh) auto;
+        grid-template-rows: 60rem auto;
         grid-template-areas:
         "header header"
         "main sidemenu";
@@ -844,6 +844,8 @@ span.none{
     color: var(--Letra_oscura);
     background-color: var(--Azul_claro);
   }
+
+ 
 
 }
 
